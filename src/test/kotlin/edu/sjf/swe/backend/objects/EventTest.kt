@@ -31,35 +31,4 @@ internal class EventTest {
         assertTrue(event2.isEmpty())
     }
 
-    @Test
-    fun testHashCode() {
-    }
-
-    @Test
-    fun testToString() {
-    }
-
-    @Test
-    fun getEventId() {
-    }
-
-    @Test
-    fun getOrgID() {
-    }
-
-    @Test
-    fun getTimeStart() {
-    }
-
-    @Test
-    fun getTimeEnd() {
-    }
-
-    @Test
-    fun getLocation() {
-    }
-
-    @Test
-    fun getDescription() {
-    }
 }
