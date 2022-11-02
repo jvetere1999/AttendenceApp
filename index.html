@@ -1,33 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Parcel Sandbox</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  </head>
-  <body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Axios</title>
+  <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+  <script src="axios.js" defer></script>
+</head>
 
-    <div id="app">
-      <h1>Login Account</h1>
-      <form action="">
-        <label for="user_id">
-          User_id
-          <input type="number" name="user_id" id="user_id" />
-        </label>
-        <label for="event_id">
-          event_id
-          <input type="number" name="event_id" id="event_id" />
-        </label>
-        <label for="time_created">
-          time_created
-          <input type="number" name="time_created" id="time_created" />
-        </label>
-        <button id="check-in">Check-in </button>
-      </form>
-    </div>
-    
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script src="axios.js"></script>
-  </body>
+<style>
+  form, form * {
+    margin: 1rem;
+    width: 300px;
+  }
+
+  form button, form input{
+    width: 100%;
+  }
+
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+</style>
+<body>
+
+  
+  <h1>Check In</h1>
+
+  <form id="check-in">
+
+    <label for="user_id">User ID: </label><br>
+    <input type="number" name="user_id" id="user_id"><br>
+
+    <label for="event_id">Event ID:</label><br>
+    <input type="number" name="event-id" id="event-id"><br>
+
+    <label for="time_created">Time Created:</label><br>
+    <input type="number" name="time_created" id="time_created"><br>
+
+    <button type="submit">Submit</button>
+
+  </form>
+  
+  <h1>Create Event</h1>
+  <form id="create-event">
+
+    <label for="org_id">Organization ID: </label><br>
+    <input type="number" name="org_id" id="org_id"><br>
+
+    <label for="time_start">Time Start:</label><br>
+    <input type="text" name="time_start" id="time_start"><br>
+
+    <label for="time_end">Time End:</label><br>
+    <input type="text" name="time_end" id="time_end"><br>
+
+    <label for="location">Location:</label><br>
+    <input type="text" name="location" id="location"><br>
+
+    <label for="description">description:</label><br>
+    <input type="text" name="description" id="description"><br>
+
+    <button type="submit">Submit</button>
+
+  </form>
+
+
+  <h1>Update Event</h1>
+  <form id="update-event">
+
+    <label for="time_start">Time Start:</label><br>
+    <input type="text" name="time_start" id="time_start"><br>
+
+    <label for="time_end">Time End:</label><br>
+    <input type="text" name="time_end" id="time_end"><br>
+
+    <label for="location">Location:</label><br>
+    <input type="text" name="location" id="location"><br>
+
+    <label for="description">description:</label><br>
+    <input type="text" name="description" id="description"><br>
+
+    <button type="submit">Submit</button>
+
+  </form>
+
+</body>
 </html>
