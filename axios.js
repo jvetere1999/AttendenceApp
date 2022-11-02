@@ -1,7 +1,7 @@
 const checkIn = document.getElementById("check-in");
 const createEvent = document.getElementById("create-event");
 const updateEvent = document.getElementById("update-event");
-//axios.defaults.baseURL = 'https://api.example.com';
+axios.defaults.baseURL = 'https://httpbin.org';
 
 checkIn.addEventListener('submit', async function(e){
   e.preventDefault();
@@ -11,7 +11,7 @@ checkIn.addEventListener('submit', async function(e){
   console.log([...formData]);
 
   try{
-    const res = await axios.post('https://httpbin.org/post', formData) //replace full url with /url
+    const res = await axios.post('/post', formData) 
     console.log(res);
   } catch(e) {
     console.log(error);
@@ -27,7 +27,7 @@ createEvent.addEventListener('submit', async function(e){
   console.log([...formData]);
 
   try{
-    const res = await axios.post('https://httpbin.org/post', formData)
+    const res = await axios.post('/post', formData)
     console.log(res);
   } catch(e) {
     console.log(error);
@@ -43,7 +43,7 @@ updateEvent.addEventListener('submit', async function(e){
   console.log([...formData]);
 
   try{
-    const res = await axios.post('https://httpbin.org/post', formData)
+    const res = await axios.post('/post', formData)
     console.log(res);
   } catch(e) {
     console.log(error);
