@@ -1,23 +1,54 @@
-const getBtn = document.getElementById('get-btn');
-const postBtn = document.getElementById('post-btn');
-const checkinBtn = document.getElementById('check-in');
-const userIDInput = document.getElementById("user_id");
-const eventIDInput = document.getElementById("event_id");
-const timeCreatedInput= document.getElementById("time_created");
-axios.defaults.baseURL = 'https://api.example.com';
+const checkIn = document.getElementById("check-in");
+const createEvent = document.getElementById("create-event");
+const updateEvent = document.getElementById("update-event");
+//axios.defaults.baseURL = 'https://api.example.com';
 
-checkinBtn.addEventListener('click', () => {
-  const userID = userIDInput.value;
-  const eventID = eventIDInput.value;
-  const timeCreated = timeCreatedInput.value;
+checkIn.addEventListener('submit', async function(e){
+  e.preventDefault();
+
+  const formData = new FormData(checkIn);
+
+  console.log([...formData]);
+
+  try{
+    const res = await axios.post('https://httpbin.org/post', formData) //replace full url with /url
+    console.log(res);
+  } catch(e) {
+    console.log(error);
+  }
+ 
+})
+
+createEvent.addEventListener('submit', async function(e){
+  e.preventDefault();
+
+  const formData = new FormData(createEvent);
+
+  console.log([...formData]);
+
+  try{
+    const res = await axios.post('https://httpbin.org/post', formData)
+    console.log(res);
+  } catch(e) {
+    console.log(error);
+  }
+ 
+})
+
+updateEvent.addEventListener('submit', async function(e){
+  e.preventDefault();
+
+  const formData = new FormData(updateEvent);
+
+  console.log([...formData]);
+
+  try{
+    const res = await axios.post('https://httpbin.org/post', formData)
+    console.log(res);
+  } catch(e) {
+    console.log(error);
+  }
+ 
+})
 
 
-  axios.post(" /url ", {
-     user_id: userID,
-     event_id: eventID,
-     time_created: timeCreated
-  })
-  .then(response => {
-      console.log(response);
-  });
-});
