@@ -1,7 +1,5 @@
 //display text (Done)//
 //create first link to login page//
-//build login page//
-
 
 
 import React from 'react';
@@ -19,12 +17,12 @@ const root = ReactDOM.createRoot(
   const text= (
     <div>
         <h1>Welcome to St. John Fisher</h1>
-        <h2>Login</h2> 
-        <h3> Options</h3>  
+        <a href="/Login Page.html">Login</a>
+         
     </div>
   );
 
-root.render(Home, Login);
+root.render (Home, Login);
   root.render(text);
   }
   WelcomeText();
